@@ -199,7 +199,7 @@ An *extraIdentity* is a map, of key value pairs whereby:
 
 Two *extraIdentities* are equal if they have the same key value pairs whereby the order is not relevant.
 
-Example for twi resource entries with the same name but different extra identities and therefore different identifier:
+Example for two resource entries with the same name but different extra identities and therefore different identifier:
 
 ```
 component:
@@ -221,7 +221,7 @@ component:
 Every entry in the *sources*, *resources* and *componentReferences* fields, and the component itself may declare
 optional labels. This allows to express application specific extensions.
 
-Labels is a map, of key value pairs whereby:
+`labels` is a map, of key value pairs whereby:
 
 - The keys must adhere to the same restrictions defined for name values (see [above](#identifier-for-sources-resources-and-component-references))
 - The values MUST be UTF-8-encoded strings.
@@ -239,7 +239,7 @@ component:
 ## Repository Contexts
 
 Every *Component Descriptor* has a field *repositoryContexts* containing an array of access information of 
-*Component Descriptor Repositories*, i.e. a stores for *Component Descriptors* which are specified later. 
+*Component Descriptor Repositories*, i.e. stores for *Component Descriptors* which are specified later. 
 
 The array of access information describes the transport chain of a *Component Descriptor* through different
 *Component Descriptor Repositories*, whereby the last entry describes the current *Component Descriptor Repository*,
@@ -253,6 +253,6 @@ Other fields of a *Component Descriptor* are:
 
 - component.provider: provider of the component,e.g. a company, organization,...
 
-- component.resources.srcRefs: References to resources have another field *srcRefs*. If the corresponding resource was build 
+- component.resources.srcRefs: Resource specifications have another field *srcRefs*. If the corresponding resource was build 
 from "local" sources these could be listed here by providing their identifier within the *Component Descriptor*, i.e. 
 their names and extraIdentities.
