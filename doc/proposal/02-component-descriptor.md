@@ -227,7 +227,7 @@ According to the [schema](component-descriptor-v2-schema.yaml) for the *Componen
 allowed. This express application specific extensions, every entry in the *sources*, *resources* and 
 *componentReferences* fields, and the component itself may declare optional labels. 
 
-Labels is a map, of key value pairs whereby:
+`labels` is a map, of key value pairs whereby:
 
 - The keys MUST adhere to the same restrictions defined for name values (see [above](#identifier-for-sources-resources-and-component-references))
 - The values MUST be either JSON or JSON compatible YAML.
@@ -261,6 +261,6 @@ Other fields of a *Component Descriptor* are:
 
 - component.provider: provider of the component,e.g. a company, organization,...
 
-- component.resources.srcRefs: References to resources have another field *srcRefs*. If the corresponding resource was build 
+- component.resources.srcRefs: Resource specifications have another field *srcRefs*. If the corresponding resource was build 
 from "local" sources these could be listed here by providing their identifier within the *Component Descriptor*, i.e. 
 their names and extraIdentities.
